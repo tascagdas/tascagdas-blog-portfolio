@@ -10,34 +10,38 @@ function Card( {children} ) {
 
 export default function Home() {
   const myName = "cagdas"
-  const[buttonText,setButtonText]=useState("Show")
+  const [isVisible, setIsVisible]=useState(true)
+
+  const cards = isVisible && <>
+    <div >
+      Hi there, im {myName}
+    </div>
+    <Card>Deneme Bu yazi parentten</Card>
+    <Card >Bu ac kapa yaparak gelmekte</Card>
+    <Card>
+      <div>
+        Bu bir JS
+      </div>
+      <Card>Buda card seption</Card>
+    </Card>
+  </>
 
 
+  function handleClick() {
 
-  function handleClick(e) {
-    e.preventDefault();
 
-    console.log(buttonText)
-      setButtonText(buttonText=='Show'?'Hide':'Show')
-    console.log(buttonText)
+    setIsVisible(!isVisible)
+
 
   }
 
   return (
     <>
       <div className="p-20 space-y-4">
-        <div >
-          Hi there, im {myName}
-        </div>
-        <Card>Deneme Bu yazi parentten</Card>
-        <Card >Bu ac kapa yaparak gelmekte</Card>
-        <Card>
-          <div>
-            Bu bir JS
-          </div>
-          <Card>Buda card seption</Card>
-        </Card>
-        <button className="btn" onClick={handleClick}>{ buttonText }</button>
+        {cards}
+        <button className="btn" onClick={handleClick}>
+          {isVisible?'Hide':'Show'}
+        </button>
       </div>
 
     </>
