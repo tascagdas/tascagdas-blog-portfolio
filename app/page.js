@@ -12,19 +12,8 @@ export default function Home() {
   const myName = "cagdas"
   const [isVisible, setIsVisible]=useState(true)
 
-  const cards = isVisible && <>
-    <div >
-      Hi there, im {myName}
-    </div>
-    <Card>Deneme Bu yazi parentten</Card>
-    <Card >Bu ac kapa yaparak gelmekte</Card>
-    <Card>
-      <div>
-        Bu bir JS
-      </div>
-      <Card>Buda card seption</Card>
-    </Card>
-  </>
+  const [names,setNames]= useState(['cdg','sln','bnr'])
+  const cards = isVisible && names.map((name,index) => <Card key={index}>{name }</Card>)
 
 
   function handleClick() {
@@ -34,14 +23,20 @@ export default function Home() {
 
 
   }
+  const handleAdd=()=>{
+    setNames([...names,'Yeni eklenen'])
+  }
 
   return (
     <>
       <div className="p-20 space-y-4">
         {cards}
-        <button className="btn" onClick={handleClick}>
-          {isVisible?'Hide':'Show'}
-        </button>
+        <div className="flex space-x-4">
+          <button className="btn" onClick={handleClick}>
+            {isVisible ? 'Hide' : 'Show'}
+          </button>
+          <button onClick={handleAdd}>Add</button>
+</div>
       </div>
 
     </>
