@@ -1,6 +1,8 @@
+// export const dynamic = 'force-dynamic'
+
 export default async function ProjectsPage() {
 
-    const response = await fetch('http://localhost:3001/repos');
+    const response = await fetch('http://localhost:3001/repos',{next:{revalidate:10}});
 
     const repos = await response.json();
 
@@ -14,7 +16,8 @@ export default async function ProjectsPage() {
                         <div>{repo.title}</div>
                         <div>{repo.description}</div>
                         <div>{repo.stargazers_count}</div>
-                    </li>))}
+                    </li>
+                ))}
             </ul>
         </div>
     </>)
