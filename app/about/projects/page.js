@@ -2,7 +2,7 @@
 
 export default async function ProjectsPage() {
 
-    const response = await fetch('http://localhost:3001/repos',{next:{revalidate:10}});
+    const response = await fetch('http://localhost:3001/repos',{cache:'no-store'});
 
     const repos = await response.json();
 
