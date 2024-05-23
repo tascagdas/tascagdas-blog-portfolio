@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="p-20 space-y-4">
+      <div className=" space-y-4">
         {cards}
         <div className="flex space-x-4">
           <button className="btn" onClick={handleClick}>
