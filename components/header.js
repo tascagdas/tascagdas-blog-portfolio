@@ -1,14 +1,18 @@
-import Counter from "@/components/counter";
 import Link from "next/link";
+import Navigation from "./navigation";
 
-export default function  Header(){
-    return(<header className="">
-        <ul className="flex space-x-4">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/about/projects">Projects</Link></li>
-        </ul>
-            <Counter/>
-    </header>
+export default function Header() {
+    return (
+        <header className="flex justify-between md:items-center">
+            <div className="flex items-center md:space-x-12">
+                <div className="hidden md:block">
+                    <Link className="text-xl" href="/">TASCAGDAS</Link>
+                </div>
+                <Navigation />
+            </div>
+            <div>
+                Dark Toggle
+            </div>
+        </header>
     )
 }
