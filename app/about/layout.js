@@ -1,7 +1,7 @@
 import React from 'react'
 
 const AboutLayout = ({ children }) => {
-  throw new Error("opps error")
+  // throw new Error("opps error")
   return (
     <>
       <div>{children}</div>

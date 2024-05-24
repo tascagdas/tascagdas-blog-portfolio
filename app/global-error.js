@@ -6,7 +6,9 @@ const GlobalError = () => {
       <html>
           <body>
               Hoaydaa!
-              Bu global error sadece production modunda çalışıyor. 
+        Bu global error sadece production modunda çalışıyor. 
+        
+        <p>enterasan bir şekilde dev modunda da çalıştırmayı başardım. :)</p>
           </body>
     </html>
   )
