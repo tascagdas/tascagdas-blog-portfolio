@@ -9,7 +9,7 @@ const ProjectList = async () => {
 
     const repos = await response.json();
 
-    throw new Error("bir sorun çıktı dostum")    
+    // throw new Error("bir sorun çıktı dostum")    
 
     return (
         <ul className='grid grid-cols-1 md:grid-cols-2 gap-4'>
