@@ -3,11 +3,13 @@ import React from 'react'
 
 const ProjectList = async () => {
 
-    const response = await fetch('http://localhost:3001/repos', { cache: 'no-store' });
+    const response = await fetch('http://localhost:3001/repos'
+        // , { cache: 'no-store' }
+    );
 
     const repos = await response.json();
 
-
+    throw new Error("bir sorun çıktı dostum")    
 
     return (
         <ul className='grid grid-cols-1 md:grid-cols-2 gap-4'>
