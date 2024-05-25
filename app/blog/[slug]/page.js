@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation"
 
 export default function BlogPage({ params }) {
-    if (!['first', 'second'].includes(params.slug)) {
+    console.log("/^[a-z]{0,10}+$/ ")
+    if (!['elfeneri-pil', 'pil-kimyasi'].includes(params.slug)) {
         notFound();
     }
     return (
