@@ -12,38 +12,45 @@ const PhotosPage = () => {
           <h1 className='text-2xl mb-8 font-semibold'>
               
           </h1>
-          <div className='grid grid-cols-2 gap-4'>
-              <div className='h-60 overflow-hidden'>
-                  {/* <img className='object-cover w-full h-full' src="/images/dog1.png" /> */}
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='h-60 overflow-hidden relative'>
                   <Image src={dog1}
-                    //   width={500}
-                    //   height={500}
-                    //   blurDataURL=''
+                      sizes='(max-width: 768px) 100vw, 50vw'
                       placeholder='blur'
                       className='object-cover w-full h-full'
                       alt="picture of Piotr Jura's dog"
+                      priority={true}
+                      quality={100}
                   />
               </div>
-              <div className='h-60 overflow-hidden'>
+              <div className='h-60 overflow-hidden relative'>
                   <Image src={dog2}
+                      sizes='(max-width: 768px) 100vw, 50vw'
                       placeholder='blur'
                       className='object-cover w-full h-full'
                       alt="picture of Piotr Jura's dog"
+                      priority={true}
+                      quality={50}
 
                   />
               </div>
-              <div className='h-60 overflow-hidden'>
+              <div className='h-60 overflow-hidden relative'>
                   <Image src={dog3}
+                      sizes='(max-width: 768px) 100vw, 50vw'
                       placeholder='blur'
                       alt="picture of Piotr Jura's dog"
                       className='object-cover w-full h-full'
+                      quality={50}
+
                   />
               </div>
-              <div className='h-60 overflow-hidden'>
+              <div className='h-60 overflow-hidden relative'>
                   <Image src={dog4}
+                      sizes='(max-width: 768px) 100vw, 50vw'
                       placeholder='blur'
                       alt="picture of Piotr Jura's dog"
                       className='object-cover w-full h-full'
+                      quality={50}
                   />
               </div>
           </div>
