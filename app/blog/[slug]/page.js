@@ -1,5 +1,18 @@
 import { notFound } from "next/navigation"
 
+const titles = {
+    'elfeneri-pil': 'Hello elfeneri-pil!',
+    'pil-kimyasi':'Hello pil-kimyasi!'
+}
+
+export async function generateMetadata({ params, searchParams }, parent) {
+    const description=(await parent).description??'default description'
+    return {
+        title: titles[params.slug],
+        description
+    }
+}
+
 export default function BlogPage({ params }) {
     console.log("/^[a-z]{0,10}+$/ ")
     if (!['elfeneri-pil', 'pil-kimyasi'].includes(params.slug)) {

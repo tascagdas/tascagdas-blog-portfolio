@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const AboutLayout = ({ children }) => {
@@ -10,8 +11,8 @@ const AboutLayout = ({ children }) => {
       </div>
 
       <ul>
-        <li>First blog post</li>
-        <li>Second blog post</li>
+        <li><Link href="blog/elfeneri-pil">elfeneri-pil blog post</Link></li>
+        <li><Link href="blog/pil-kimyasi">pil-kimyasi blog post</Link></li>
       </ul>
     </>
   )
