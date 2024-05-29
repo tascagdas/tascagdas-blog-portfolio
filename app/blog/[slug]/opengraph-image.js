@@ -41,7 +41,7 @@ export default async function Image({params}) {
                 }}
             >
                 <div style={{ margin: 25 }}>{titles[params.slug]}</div>
-                <div style={{ margin: 25, fontSize32 }}>Bu blogpostun bir ozeti seklinde bulunacak.</div>
+                <div style={{ margin: 25, fontSize:32 }}>Bu blogpostun bir ozeti seklinde bulunacak.</div>
             </div>
         ),
         // ImageResponse options
