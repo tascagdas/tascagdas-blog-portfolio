@@ -21,8 +21,8 @@ const BlogPostsPage = async () => {
 
   return (
       <>
-          <h1 className='mb-8 text-xl'>Son postlar</h1>
-          <div className='text-lg  text-gray-600 dark:text-gray-400 mb-8'>Guncel postlar icin...</div>
+          <h1 className='mb-8 text-xl'>Güncel içerikler</h1>
+          <div className='text-lg  text-gray-600 dark:text-gray-400 mb-8'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quaerat. Pariatur tempora reprehenderit voluptas consectetur autem iste, fugiat hic fuga ab, quidem maxime ullam blanditiis?</div>
           <hr />
           <ul className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {
@@ -34,6 +34,7 @@ const BlogPostsPage = async () => {
                   ))
               }
           </ul>
+
     </>
   )
 }

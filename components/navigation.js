@@ -10,13 +10,13 @@ const Navigation = () => {
             <ul className="flex md:space-x-4 flex-col md:flex-row">
 
                 <li>
-                    <Link className={styles.link} href="/about">About</Link>
+                    <Link className={styles.link} href="/about">Hakkımda</Link>
                 </li>
                 <li>
-                    <Link className={styles.link} href="/about/projects">Projects</Link>
+                    <Link className={styles.link} href="/about/projects">Projeler</Link>
                 </li>
                 <li>
-                    <Link className={styles.link} href="/photos">Photos</Link>
+                    <Link className={styles.link} href="/photos">Fotoğraflar</Link>
                 </li>
                 <li>
                     <Link className={styles.link} href="/blog">Blog</Link>
