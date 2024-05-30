@@ -1,4 +1,7 @@
+import { MDXRemote } from "next-mdx-remote/rsc"
 import { notFound } from "next/navigation"
+import fs from 'fs'
+import path from "path"
 
 const titles = {
     'elfeneri-pil': 'Hello elfeneri-pil!',
@@ -14,13 +17,22 @@ export async function generateMetadata({ params, searchParams }, parent) {
 }
 
 export default function BlogPage({ params }) {
-    console.log("/^[a-z]{0,10}+$/ ")
-    if (!['elfeneri-pil', 'pil-kimyasi'].includes(params.slug)) {
-        notFound();
+    // if (!['elfeneri-pil', 'pil-kimyasi'].includes(params.slug)) {
+    //     notFound();
+    // }
+
+    let markdown
+
+    try {
+        markdown = fs.readFileSync(
+            path.join(process.cwd(), 'content', `${params.slug}.mdx`)
+        )
+    } catch (e) {
+        notFound()
     }
     return (
-        <>
-            Buraya bu yazi route parametresinden geliyor.... <hr />&#34;{params.slug}&#34;
-        </>
+        <article className="prose dark:prose-invert">
+            <MDXRemote source={markdown} />
+        </article>
     )
 }
