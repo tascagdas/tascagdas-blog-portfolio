@@ -2,15 +2,29 @@ import React from 'react'
 import { getPosts } from '@/lib/posts'
 import Link from 'next/link'
 
-const BlogPostsPage = async () => {
-
-    const posts = await getPosts();
+const BlogPostsPage = async ({
+    searchParams
+}) => {
+    const tags = searchParams.tags?.split(',');
+    const order = searchParams.order ?? 'newest'
+    const posts = await getPosts(
+        {
+            tags,
+            newest: order === 'newest'
+        }
+    );
 
   return (
       <>
           <h1 className='mb-8 text-xl'>Güncel içerikler</h1>
           <div className='text-lg  text-gray-600 dark:text-gray-400 mb-8'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quaerat. Pariatur tempora reprehenderit voluptas consectetur autem iste, fugiat hic fuga ab, quidem maxime ullam blanditiis?</div>
           <hr />
+
+          <div className='mb-8'>
+              Önce&nbsp;
+              {order === 'newest' && <Link href="/blog?order=oldest" className='underline'>Eski</Link>}
+              {order === 'oldest' && <Link href="/blog?order=newest" className='underline'>Yeni</Link>}
+          </div>
           <ul className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {
                   posts.map(post => (
@@ -21,7 +35,6 @@ const BlogPostsPage = async () => {
                   ))
               }
           </ul>
-
     </>
   )
 }
