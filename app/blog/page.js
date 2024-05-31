@@ -1,16 +1,21 @@
 import React from 'react'
 import { getPosts } from '@/lib/posts'
 import Link from 'next/link'
+import Pagination from '@/components/pagination';
 
 const BlogPostsPage = async ({
     searchParams
 }) => {
     const tags = searchParams.tags?.split(',');
-    const order = searchParams.order ?? 'newest'
-    const posts = await getPosts(
+    const order = searchParams.order ?? 'newest';
+    const page = searchParams.page ?? 1;
+    const limit = searchParams.limit ?? 4;
+    const {posts,pageCount} = await getPosts(
         {
             tags,
-            newest: order === 'newest'
+            newest: order === 'newest',
+            page,
+            limit
         }
     );
 
@@ -35,6 +40,10 @@ const BlogPostsPage = async ({
                   ))
               }
           </ul>
+
+          <div className='mt-8'>
+              <Pagination pageCount={pageCount}/>
+          </div>
     </>
   )
 }
