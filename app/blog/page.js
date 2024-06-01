@@ -1,4 +1,3 @@
-import React from 'react'
 import { getPosts } from '@/lib/posts'
 import Link from 'next/link'
 import Pagination from '@/components/pagination';
