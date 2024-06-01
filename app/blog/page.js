@@ -2,6 +2,7 @@ import React from 'react'
 import { getPosts } from '@/lib/posts'
 import Link from 'next/link'
 import Pagination from '@/components/pagination';
+import H1 from '@/components/h1';
 
 const BlogPostsPage = async ({
     searchParams
@@ -21,7 +22,7 @@ const BlogPostsPage = async ({
 
   return (
       <>
-          <h1 className='mb-8 text-xl'>Güncel içerikler</h1>
+          <H1>Güncel içerikler</H1>
           <div className='text-lg  text-gray-600 dark:text-gray-400 mb-8'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quaerat. Pariatur tempora reprehenderit voluptas consectetur autem iste, fugiat hic fuga ab, quidem maxime ullam blanditiis?</div>
           <hr />
 
