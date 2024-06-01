@@ -8,9 +8,9 @@ const nextModeIcons = {
     'dark':'🌞'
 }
 
-const DarkMode = () => {
+const DarkMode = ({defaultTheme}) => {
 
-    const {theme,toggleTheme } = useDarkMode();
+    const { theme, toggleTheme } = useDarkMode(defaultTheme);
 
     return (
         <>
