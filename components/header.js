@@ -9,7 +9,7 @@ export default function Header() {
         <header className="flex justify-between md:items-center">
             <div className="flex items-center md:space-x-12">
                 <div className="hidden md:block">
-                    <Link className="text-xl" href="/">tascagdas</Link>
+                    <Link className="text-xl font-mono" href="/">tascagdas</Link>
                 </div>
                 <Navigation />
             </div>

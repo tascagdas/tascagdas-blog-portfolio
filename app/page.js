@@ -1,40 +1,32 @@
-'use client'
-
-import Card from "@/components/card"
-import { useState } from "react"
-
+import H1 from "@/components/h1";
+import { getPosts } from "@/lib/posts";
+import Link from "next/link";
 
 
-export default function Home() {
-  const myName = "cagdas"
-  const [isVisible, setIsVisible]=useState(true)
+export default async function Home() {
 
-  const [names,setNames]= useState(['cdg','sln','bnr'])
-  const cards = isVisible && names.map((name,index) => <Card key={index}>{name }</Card>)
-
-
-  function handleClick() {
-
-
-    setIsVisible(!isVisible)
-
-
-  }
-  const handleAdd=()=>{
-    setNames([...names,'Yeni eklenen'])
-  }
-
+  const { posts } = await getPosts({
+    newest: true,
+    limit:3
+  });
   return (
     <>
-      <div className=" space-y-4">
-        {cards}
-        <div className="flex space-x-4">
-          <button className="btn" onClick={handleClick}>
-            {isVisible ? 'Hide' : 'Show'}
-          </button>
-          <button onClick={handleAdd}>Add</button>
-</div>
-      </div>
+      <section className="mb-8">
+        <H1>Sayfama Hoş Geldiniz!!</H1>
+        <p>Benim adım Çağdaş, junior Full Stack Web Developer'ım </p>
+        <p><Link href="/about/projects" className=" underline hover:text-green-700 hover:no-underline">Projelerimi</Link>, <Link href="/photos" className=" underline hover:no-underline hover:text-green-700">Fotoğraflarımı</Link> ve <Link href="/blog" className=" underline hover:no-underline hover:text-green-700">Blog</Link> yazılarıma göz atabilirsiniz.</p>
+      </section>
+      
+      <section>
+        <h2 className="text-lg mb-8">Blogda son yayınlananlar</h2>
+        <ul>
+          {posts.map(post => <li key={post.slug}>
+            <span className="text-gray-400">{post.frontmatter.date}&nbsp;</span>
+              <Link className="underline hover:no-underline" href={`/blog/${post.slug}`}>{post.frontmatter.title }</Link>
+            
+          </li>)}
+        </ul>
+      </section>
 
     </>
   );

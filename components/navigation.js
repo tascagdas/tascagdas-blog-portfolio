@@ -8,7 +8,9 @@ const Navigation = () => {
     return (
         <nav className='font-mono'>
             <ul className="flex md:space-x-4 flex-col md:flex-row">
-
+                <li>
+                    <Link className={`${styles.link} inline md:hidden`} href="/">Anasayfa</Link>
+                </li>
                 <li>
                     <Link className={styles.link} href="/about">Hakkımda</Link>
                 </li>

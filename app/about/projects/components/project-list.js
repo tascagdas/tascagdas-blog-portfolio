@@ -3,12 +3,14 @@ import React from 'react'
 
 const ProjectList = async () => {
 
-    const response = await fetch('http://localhost:3001/repos'
+    const response = await fetch(
+        'https://api.github.com/users/tascagdas/repos'
         // , { cache: 'no-store' }
     );
 
     const repos = await response.json();
 
+    
     // throw new Error("bir sorun çıktı dostum")    
 
     return (
@@ -17,7 +19,7 @@ const ProjectList = async () => {
                 <li key={repo.id} className="mb-4">
                     <Card className='font-mono h-full'>
                         <div className='flex justify-between items-center mb-4'>
-                            <div className='font-semibold'>{repo.title}</div>
+                            <div className='font-semibold'>{repo.name}</div>
                             <div>⭐️{repo.stargazers_count}</div>
 
                         </div>
