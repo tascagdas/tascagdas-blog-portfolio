@@ -24,8 +24,8 @@ const BlogPostsPage = async ({
 
   return (
       <>
-          <H1>Güncel içerikler</H1>
-          <div className='text-lg  text-gray-600 dark:text-gray-400 mb-8'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quaerat. Pariatur tempora reprehenderit voluptas consectetur autem iste, fugiat hic fuga ab, quidem maxime ullam blanditiis?</div>
+          <H1>Blog yazılarım</H1>
+          <div className='text-lg  text-gray-600 dark:text-gray-400 mb-8'>Aşağıda genel ilgi alanlarım/hobilerim ile ilgili yazmış olduğum içerikleri görebilirisiniz.</div>
           <hr />
 
           <div className='mb-8'>

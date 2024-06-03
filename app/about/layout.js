@@ -7,7 +7,7 @@ const AboutLayout = ({ children }) => {
     <>
       <div>{children}</div>
       <div className='mt-8'>
-        <h2 className='mb-4 text-xl'>Ayrıca beğenebileceğiniz şeyler...</h2>
+        <h2 className='mb-4 text-xl font-bold'>Ayrıca beğenebileceğiniz şeyler...</h2>
       </div>
 
       <ul>
