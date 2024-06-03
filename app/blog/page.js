@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Pagination from '@/components/pagination';
 import H1 from '@/components/h1';
 
+//işe yaramıyacak yöntem ağağıdaki force static.
+// export const dynamic='force-static'
+
 const BlogPostsPage = async ({
     searchParams
 }) => {
