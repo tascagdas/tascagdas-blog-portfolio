@@ -13,7 +13,7 @@ export default async function Home() {
     <>
       <section className="mb-8">
         <H1>Sayfama Hoş Geldiniz!!</H1>
-        <p>Benim adım Çağdaş, junior Full Stack Web Developer'ım </p>
+        <p>Benim adım Çağdaş, junior Full Stack Web Developer&apos;ım </p>
         <p><Link href="/about/projects" className=" underline hover:text-green-700 hover:no-underline">Projelerimi</Link>, <Link href="/photos" className=" underline hover:no-underline hover:text-green-700">Fotoğraflarımı</Link> ve <Link href="/blog" className=" underline hover:no-underline hover:text-green-700">Blog</Link> yazılarıma göz atabilirsiniz.</p>
       </section>
       
