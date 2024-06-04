@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={theme}>
       <body className={roboto.className}>
         <Header></Header>
-        <main className="mt-12">
+        <main className="mt-12 mx-4">
           {children}
         </main>
         <ChatBbot></ChatBbot>
