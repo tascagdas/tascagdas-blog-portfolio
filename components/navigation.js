@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Link from "next/link";
 import styles from "./navigation.module.css"
@@ -5,8 +6,9 @@ import styles from "./navigation.module.css"
 
 
 const Navigation = () => {
+
     return (
-        <nav className='font-mono'>
+        <nav className='font-mono '>
             <ul className="flex md:space-x-4 flex-col md:flex-row">
                 <li>
                     <Link className={`${styles.link} inline md:hidden`} href="/">Anasayfa</Link>
@@ -25,7 +27,6 @@ const Navigation = () => {
                 </li>
             </ul>
         </nav>
-
     )
 }
 
