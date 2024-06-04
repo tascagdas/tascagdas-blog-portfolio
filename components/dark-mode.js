@@ -14,7 +14,7 @@ const DarkMode = ({defaultTheme}) => {
 
     return (
         <>
-            <button onClick={toggleTheme}>
+            <button className='btn-emoji' onClick={toggleTheme}>
                 {nextModeIcons[theme]}
             </button>
         </>
