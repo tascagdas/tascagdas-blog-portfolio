@@ -16,7 +16,7 @@ export const metadata = {
     template: '%s | Tascagdas',
     default: 'Tascagdas'
   },
-  description: "Nextjs öğreniyorum.",
+  description: "Çağdaş Taş&apos;a ait kişisel blog sayfası. Nextjs kullanılarak yapılmıştır.",
 };
 
 export default function RootLayout({ children }) {

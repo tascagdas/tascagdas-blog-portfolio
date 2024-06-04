@@ -12,8 +12,8 @@ export const size = {
 
 
 const titles = {
-    'elfeneri-pil': 'Hello elfeneri-pil!',
-    'pil-kimyasi': 'Hello pil-kimyasi!'
+    'elfeneri-pil': 'Tascagdas blog elfenerlerinde pil!',
+    'elfeneri': 'Populer el fenerleri burada gel hanim gel'
 }
 
 export const contentType = 'image/png'
