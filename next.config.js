@@ -8,3 +8,15 @@ const nextConfig = {
 }
 
 module.exports = withMDX(nextConfig)
+
+module.exports = {
+    images: {
+        dangerouslyAllowSVG: true,
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'camo.githubusercontent.com',
+            },
+        ],
+    },
+}
