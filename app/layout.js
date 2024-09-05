@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/header";
 import ChatBbot from "@/components/chatbot";
 import useServerDarkMode from "@/hooks/use-server-dark-mode";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +31,8 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <ChatBbot></ChatBbot>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
